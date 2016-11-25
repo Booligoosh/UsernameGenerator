@@ -1,5 +1,8 @@
 //$('#choiceOption').change(changeOptions);
-document.getElementById('choiceOption').onchange = changeOptions();
+var box = document.getElementById('choiceOption');   // Get the checkbox
+var att = document.createAttribute("onchange");       // Create a "onchange" attribute
+att.value = "changeOptions()";                           // Set the value of the onchange attribute
+box.setAttributeNode(att);                          // Add the onchange attribute to the checkbox
 
 function changeOptions () {
   //$('#random').prop('checked', true);
